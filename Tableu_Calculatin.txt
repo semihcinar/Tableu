@@ -1,0 +1,116 @@
+7 günlük vakıa toplamı / nüfus * 100 000
+
+
+
+{
+max(if [country_short_name] = "United States" THEN [report_date] END)
+}
+
+
+Global COVID-19 Tracker
+<Min Date>-<Max Date>
+9:16
+{MAX([Report Date])}
+9:16
+{MIN([Report Date])}
+
+
+
+
+Date is Less Than or Equal to US Date
+[report_date] <= [Max Date for US] 
+
+
+
+New or Cumulative
+Positive Cases or Deaths
+
+Date is max?
+[Max Date] = [report_date]
+
+
+Total or New Positive Cases
+
+IF [New or Cumulative] = 'New' THEN [People Positive New Cases Count]
+ELSE [People Positive Cases Count] END
+
+Current Day Cumulative or New Positive Cases
+IF [Date is max?] THEN [Total or New Positive Cases] END
+
+
+if [Date is max?] then [Total or New Positive Cases] END
+10:23
+Current day Cumulative or New Positive Cases
+
+
+Previous Day Cumulative or New Cases
+if DATEDIFF("day", [Report Date],[Max Date]) = 1 then [Total or New Positive Cases] END
+
+
+
+<New or Cumulative Header> Deaths
+<SUM(Current day Cumulative or New Deaths)>
+<AGG(Difference in Cumulative or New Deaths Same)><AGG(Difference in Cumulative or New Deaths Down)><AGG(Difference in Cumulative or New Deaths Up)> <AGG(Difference in Cumulative or New to Previous Day Deaths %)> vs previous day
+<SUM(Previous Day Cumulative or New Deaths)>
+
+
+
+Isaac - Instructor  1:05 PM
+if [New or Cumulative] = "Cumulative" and [Positive Cases or Deaths] = "Positive Cases" then [People Positive Cases Count]
+ELSEIF  [New or Cumulative] = "New" and [Positive Cases or Deaths] = "Positive Cases" then [People Positive New Cases Count]
+ELSEIF  [New or Cumulative] = "Cumulative" and [Positive Cases or Deaths] = "Deaths" then [People Death Count]
+ELSEIF  [New or Cumulative] = "New" and [Positive Cases or Deaths] = "Deaths" then [People Death New Count]
+END
+
+
+Isaac - Instructor  1:24 PM
+<Country Short Name>
+<ATTR(Report Date)>
+<ATTR(Selected Metric Header)>: <SUM(Selected Metric)>
+Cumulative Death:	<SUM(People Death Count)>
+New Death:	<SUM(People Death New Count)>
+Cumulative Positive Cases:	<SUM(People Positive Cases Count)>
+New Positive Cases:	<SUM(People Positive New Cases Count)>
+
+
+
+Isaac - Instructor  1:27 PM
+[New or Cumulative] + " " + [Positive Cases or Deaths]
+1:28
+Selected Metric Header
+
+
+Isaac - Instructor  1:31 PM
+<Country Short Name>
+<ATTR(Report Date)>
+<ATTR(Selected Metric Header)>: <SUM(Selected Metric)>
+Cumulative Death:	<SUM(People Death Count)>
+New Death:	<SUM(People Death New Count)>
+Cumulative Positive Cases:	<SUM(People Positive Cases Count)>
+New Positive Cases:	<SUM(People Positive New Cases Count)>
+
+
+Isaac - Instructor  1:31 PM
+<Country Short Name>
+<ATTR(Report Date)>
+<ATTR(Selected Metric Header)>: <SUM(Selected Metric)>
+Cumulative Death:	<SUM(People Death Count)>
+New Death:	<SUM(People Death New Count)>
+Cumulative Positive Cases:	<SUM(People Positive Cases Count)>
+New Positive Cases:	<SUM(People Positive New Cases Count)>
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+
+1:35
+<Parameters.New or Cumulative> <Parameters.Positive Cases or Deaths>
+Select a Country to see more details
+
+
+6412247	- 23946	
+57000	- 290	
+2021-09-01
