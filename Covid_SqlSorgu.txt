@@ -1,0 +1,55 @@
+
+https://data.world/covid-19-data-resource-hub/covid-19-case-counts/workspace/query?newQueryContent=SELECT+%2A+FROM+covid_19_activity+LIMIT+5000&newQueryType=SQL&tempId=1630642081425
+
+
+
+
+SELECT   *
+FROM            covid_19_activity
+WHERE      country_alpha_3_code = 'ARM' 
+        OR country_alpha_3_code = 'TUR' 
+        OR country_alpha_3_code = 'AZE'
+        OR country_alpha_3_code = 'IRQ'
+        OR country_alpha_3_code = 'IRN'
+        OR country_alpha_3_code = 'GRC'
+        OR country_alpha_3_code = 'BGR'
+        OR country_alpha_3_code = 'GEO'      
+        OR country_alpha_3_code = 'SYR'    
+
+
+
+
+
+
+EURO
+
+
+SELECT   *
+FROM            covid_19_activity
+WHERE      country_alpha_3_code = 'DEU' 
+        OR country_alpha_3_code = 'BEL' 
+        OR country_alpha_3_code = 'AZE'
+        OR country_alpha_3_code = 'BGR'
+        OR country_alpha_3_code = 'DNK'
+        OR country_alpha_3_code = 'GRC'
+        OR country_alpha_3_code = 'ESP'
+        OR country_alpha_3_code = 'EST'      
+        OR country_alpha_3_code = 'FIN'
+        OR country_alpha_3_code = 'HUN'
+        OR country_alpha_3_code = 'IRL'
+        OR country_alpha_3_code = 'LTU'
+        OR country_alpha_3_code = 'POL'
+        OR country_alpha_3_code = 'ROU'
+        OR country_alpha_3_code = 'SWE'
+        OR country_alpha_3_code = 'AUT'
+        OR country_alpha_3_code = 'BLR'
+        OR country_alpha_3_code = 'BIH'
+        OR country_alpha_3_code = 'FRA'
+        OR country_alpha_3_code = 'GBR'
+        OR country_alpha_3_code = 'ITA'
+        OR country_alpha_3_code = 'LUX'
+        OR country_alpha_3_code = 'LVA'
+        OR country_alpha_3_code = 'NLD'
+        OR country_alpha_3_code = 'NOR'   
+        OR country_alpha_3_code = 'SVN'
+	OR country_alpha_3_code = 'TUR'    
