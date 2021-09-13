@@ -1,0 +1,11 @@
+HESAPLAMA
+
+KAR
+
+SUM ([kar]) / SUM ([Satıss])
+
+
+NULL değerleri 0 yapan fonksiyon
+
+ZN(SUM([SATIŞ]))
+
